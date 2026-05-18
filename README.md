@@ -114,10 +114,17 @@ Restart SignalRGB. The software should now correctly identify the keyboard and s
 ## Credit
 
 SonixQMK Project: https://github.com/SonixQMK 
+
 For their incredible work in porting QMK to SONiX MCUs and providing the essential flashing tools.
 
 EEVblog Community: https://www.eevblog.com/forum/microcontrollers/hfd2201kba-any-details-on-this-microcontroller/
+
 Specifically the technical discussion that helped identify the HFD2201KBA as a rebadged SONiX SN32F24x series.
 
+The SRGBmods Community: https://github.com/SRGBmods 
+
+For providing pre-compiled binaries and the foundation for SignalRGB compatibility.
+
+##
 🎓 Author
 Simone Segala - Computer Science Student @ Università del Piemonte Orientale.
