@@ -13,7 +13,8 @@ Communication: Raw HID via Interface 1.
 
 Endpoint Configuration: UsagePage: 0xff60, Usage: 0x61.
 
-🔍 Hardware Verification
+## Phase 1: Hardware Verification
+
 Confirm your PCB uses the HFD2201KBA chip. Research confirms this is a rebadged SONiX SN32F248B (Cortex-M0). If you see this label, you can proceed using SN32F248B firmware targets.
 
 📥 Download Tools
@@ -26,7 +27,7 @@ QMK + SignalRGB Firmware:
 Search for royal_kludge or rk61 in these official repositories:
 https://github.com/SRGBmods/QMK-Binaries/tree/main/QMK%2BVIA-Firmware/0.15.12-sonix
 
-Phase 2: Enter Bootloader Mode (Physical Step)
+## Phase 2: Enter Bootloader Mode
 The HFD2201KBA / SN32F248B requires a physical bridge to enter bootloader mode:
 
 Unplug the USB cable.
@@ -41,7 +42,8 @@ Hold the short for 2-3 seconds, then release.
 
 The keyboard LEDs will remain off and keys won't respond: you are now in Bootloader Mode ✅.
 
-Phase 3: The Flashing Process (Mandatory Order)
+## Phase 3: Flashing Process
+
 ATTENTION — Flash the Jumploader First
 You MUST install the Jumploader before flashing the main QMK firmware. Failure to do so may result in an unusable device.
 
@@ -84,7 +86,7 @@ ISO Layout (Large vertical "L-shaped" Enter key - European/Italian Layout):
 
 Once finished, unplug and replug the keyboard.
 
-Phase 4: SignalRGB Integration & Final Configuration
+## Phase 4: SignalRGB Integration & Final Configuration
 Install the Plugin:
 Copy the RK_61_Keyboard.js file to the SignalRGB plugins directory:
 %ProgramData%\WhirlwindFX\SignalRGB\Plugins
@@ -109,7 +111,8 @@ Note: Ensure you keep the 0x prefix for hexadecimal values.
 Final Restart:
 Restart SignalRGB. The software should now correctly identify the keyboard and start streaming lighting data. Everything should be working perfectly!
 
-🤝 Credits & Acknowledgments🤝
+## Credit
+
 SonixQMK Project: https://github.com/SonixQMK 
 For their incredible work in porting QMK to SONiX MCUs and providing the essential flashing tools.
 
